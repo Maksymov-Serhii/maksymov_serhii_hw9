@@ -4,15 +4,15 @@ import MainPage from '../MainPage/MainPage';
 import Contacts from '../Contacts/Contacts';
 import Products from '../Products/Products';
 import ProductItem from '../ProductItem/ProductItem';
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <div className='shop'>
         <h3>Internet Shop</h3>
           <BrowserRouter>
           <Routes>
-            <Route path='/' element={<MainPage />} />
+            <Route path='/' element={<MainPage />}>
+            </Route>
             <Route path='/contacts' element={<Contacts />} />
             <Route path='/products' element={<Products />} />
               <Route path='/products/:productId' element={<ProductItem />} />
