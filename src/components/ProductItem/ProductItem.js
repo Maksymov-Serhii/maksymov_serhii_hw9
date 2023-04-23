@@ -40,6 +40,9 @@ const ProductItem = () => {
         <button className="button" onClick={nextProductHandle}>Наступний товар</button>
       </div>
       <img src={productImages[productId]} alt={productId}></img>
+      <p>
+        <button className="button">Купити!</button>
+      </p>
     </div>
   )
 }
