@@ -19,13 +19,13 @@ const ProductItem = () => {
   }
   const navigate = useNavigate();
 
-  const previousProductHandle = () => {
+  const handlePreviousProduct = () => {
     if (productId > 1) {
       navigate(`/products/${productId - 1}`);
     }
   
   }
-  const nextProductHandle = () => {
+  const handleNextProduct = () => {
     if (productId < 5) {
       navigate(`/products/${+productId + 1}`);
     }
@@ -35,9 +35,9 @@ const ProductItem = () => {
     <div className="product-page">
       <Menu />
       <div className="product-navigation">
-        <button className="button" onClick={previousProductHandle}>Попередній товар</button>
+        <button className="button" onClick={handlePreviousProduct}>Попередній товар</button>
         <h4>Товар {productId}</h4>
-        <button className="button" onClick={nextProductHandle}>Наступний товар</button>
+        <button className="button" onClick={handleNextProduct}>Наступний товар</button>
       </div>
       <img src={productImages[productId]} alt={productId}></img>
       <p>
